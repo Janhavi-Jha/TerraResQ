@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --color-space-950: #040a07;
+  --color-space-900: #07120D;
+  --color-space-850: #09150F;
+  --color-space-800: #0B1711;
+  --color-space-750: #0E1E16;
+  --color-space-700: #1A2E22;
+  --color-space-600: #244030;
+  --color-space-500: #2E5C45;
+
+  --color-earth-300: #86EFAC;
+  --color-earth-400: #34D399;
+  --color-earth-500: #22C55E;
+  --color-earth-600: #16A34A;
+  --color-earth-700: #15803D;
+  --color-earth-800: #166534;
+  --color-earth-900: #14532D;
+  --color-earth-950: #07120D;
+
+  /* Remapped to accessible sage & emerald green to eliminate blue entirely */
+  --color-ocean-300: #A7F3D0;
+  --color-ocean-400: #86EFAC;
+  --color-ocean-500: #34D399;
+  --color-ocean-600: #22C55E;
+  --color-ocean-700: #16A34A;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    background-color: #07120D;
+    color: #F8FAFC;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, kbd, samp, pre {
+    font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom shared page container */
+.page-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07120D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A2E22;
+  border-radius: 9999px;
+  border: 2px solid #07120D;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22C55E;
+}
+
+/* Leaflet map styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  background-color: #102219 !important;
+}
+
+/* Custom subtle dark forest utility classes */
+.glass-card {
+  background: rgba(16, 34, 25, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(26, 54, 40, 0.8);
+}
+
+.glow-earth {
+  box-shadow: 0 0 20px -5px rgba(34, 197, 94, 0.25);
+}
+
+.glow-forest {
+  box-shadow: 0 0 20px -5px rgba(52, 211, 153, 0.2);
+}
